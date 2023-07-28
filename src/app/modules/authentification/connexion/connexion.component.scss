@@ -1,0 +1,21 @@
+@import '../../../../assets/scss/theme/theme.scss';
+
+:host {
+  .p-inputtext {
+    width: 100%;
+  }
+
+  .p-password {
+    width: 100%;
+  }
+
+  .p-button {
+    width: 70%;
+  }
+}
+
+::ng-deep {
+  .title-color {
+    color: $primaryColor;
+  }
+}

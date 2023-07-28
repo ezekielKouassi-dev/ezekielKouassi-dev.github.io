@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-8 left-section">
+            <div class="welcome-section">
+                <h1>BIENVENUE SUR RICVA</h1>
+                <p>
+                    RICVA est une plateforme de suivi et de gestion du secteur agricole,
+                    de la production à la vente en passant par le financement.
+                </p>
+            </div>
+            <!-- <p-carousel [value]="images" [numVisible]="1" [numScroll]="1" [circular]="false">
+                <p>okok</p>
+                <ng-template let-image pTemplate="item">
+                    <div class="border-1 surface-border border-round m-2 text-center py-5 px-3" [ngStyle]="{'background-image': '{{image.path}}'}">
+                        <div class="mb-3">
+                            <img src="{{ image.path }}" [alt]="image.name" class="w-6 shadow-2" />
+                        </div>
+                        <div>
+                            <h4 class="mb-1">{{ image.name }}</h4>
+                            <p>okok</p>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel> -->
+        </div>
+        <div class="col-lg-4 rigth-section">
+          <h2 class="text-center">RICVA LOGO</h2>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

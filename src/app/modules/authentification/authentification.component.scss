@@ -1,0 +1,31 @@
+:host {
+  .left-section {
+    background-image: url('../../../assets/img/agri2.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    padding: 70px;
+
+    .welcome-section {
+      color: #fff;
+      width: 75%;
+      margin-top: 25vh;
+
+      h1 {
+        font-weight: 900;
+      }
+    }
+
+    // .overlay {
+    //     max-width: 100%;
+    //     background-color: #000;
+    //     opacity: 0.5;
+    // }
+  }
+
+  .rigth-section {
+    padding: 75px;
+  }
+
+}
