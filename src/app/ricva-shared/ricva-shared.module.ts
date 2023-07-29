@@ -5,15 +5,18 @@ import {ListeSpeculationComponent} from './components/liste-speculation/liste-sp
 import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
 import {BadgeModule} from 'primeng/badge';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
   declarations: [
     SpeculationComponent,
-    ListeSpeculationComponent
+    ListeSpeculationComponent,
+    HeaderComponent
   ],
   exports: [
-    ListeSpeculationComponent
+    ListeSpeculationComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,

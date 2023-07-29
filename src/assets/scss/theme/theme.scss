@@ -1,4 +1,4 @@
-$primaryColor: #b3887f !default;
+$primaryColor: #e2b7ac !default;
 $secondaryColor: #5c3d2b !default;
 $primaryLightColor: scale-color($primaryColor, $lightness: 60%) !default;
 $primaryDarkColor: scale-color($primaryColor, $lightness: -10%) !default;
@@ -17,6 +17,7 @@ $yellow: #FFCE26;
 $light-yellow: #FFF2C6;
 $orange: #FD7238;
 $light-orange: #FFE0D3;
+$light-orange-opacity: rgba(255, 224, 211, 0.51);
 $highlightBg: #E3F2FD !default;
 $highlightTextColor: #495057 !default;
 

@@ -1,0 +1,61 @@
+@import '../../../../assets/scss/theme/theme.scss';
+
+:host::ng-deep {
+  .p-breadcrumb {
+    border: none;
+  }
+
+  .p-button {
+    background-color: $primaryDarkColor;
+  }
+
+  .left-card {
+    padding: 15px 8px;
+    height: 100%;
+    width: 100%;
+    background-color: $shade100;
+    border: none;
+
+    .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .menu-btn {
+        padding: 0 15px;
+        border-radius: 10px;
+
+        .p-badge {
+          background: none;
+          color: #000;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: $light-orange-opacity;
+
+          .p-badge, .text {
+            color: $secondaryColor;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: #000;
+        }
+
+        .text {
+          font-size: 15px !important;
+        }
+      }
+
+      .active {
+        background-color: $light-orange-opacity;
+        .text, .p-badge {
+          color: $secondaryColor;
+        }
+      }
+    }
+
+  }
+}
