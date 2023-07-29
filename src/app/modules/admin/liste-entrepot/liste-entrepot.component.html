@@ -1,88 +1,132 @@
 <div class="row">
-  <div class="col-lg-6">
-    <p-breadcrumb [model]="items"></p-breadcrumb>
-  </div>
-  <div class="col-lg-6 text-end">
-    <button pButton pRipple label="Créer un entrepôt" class="p-button"></button>
-  </div>
+	<div class="col-lg-6">
+		<p-breadcrumb [model]="items"></p-breadcrumb>
+	</div>
+	<div class="col-lg-6 text-end">
+		<button pButton pRipple label="Créer un entrepôt" class="p-button"></button>
+	</div>
 </div>
 
 <div class="row">
-  <div class="col-lg-3">
-    <div class="card left-card">
-      <ul class="menu">
-        <li class="menu-btn p-2" [class.active]="menuSelectionne === 1" (click)="menuSelectionne = 1">
-          <a class="d-flex flex-row justify-content-between">
-            <span class="text">Campagnes</span>
-            <p-badge value="12"></p-badge>
-          </a>
-        </li>
-        <li class="menu-btn p-2" [class.active]="menuSelectionne === 2" (click)="menuSelectionne = 2">
-          <a class="d-flex flex-row justify-content-between">
-            <span class="text">Détails campagne</span>
-            <p-badge value="12"></p-badge>
-          </a>
-        </li>
-        <li class="menu-btn p-2" [class.active]="menuSelectionne === 3" (click)="menuSelectionne = 3">
-          <a class="d-flex flex-row justify-content-between">
-            <span class="text">Spéculations</span>
-            <p-badge value="12"></p-badge>
-          </a>
-        </li>
-        <li class="menu-btn p-2" [class.active]="menuSelectionne === 4" (click)="menuSelectionne = 4">
-          <a class="d-flex flex-row justify-content-between">
-            <span class="text">détails scépulation</span>
-            <p-badge value="12"></p-badge>
-          </a>
-        </li>
-        <li class="menu-btn p-2" [class.active]="menuSelectionne === 5" (click)="menuSelectionne = 5">
-          <a class="d-flex flex-row justify-content-between">
-            <span class="text">Entrepôt</span>
-            <p-badge value="12"></p-badge>
-          </a>
-        </li>
-        <li class="menu-btn p-2" [class.active]="menuSelectionne === 6" (click)="menuSelectionne = 6">
-          <a class="d-flex flex-row justify-content-between">
-            <span class="text">Groupement</span>
-            <p-badge value="12"></p-badge>
-          </a>
-        </li>
-        <li class="menu-btn p-2" [class.active]="menuSelectionne === 7" (click)="menuSelectionne = 7">
-          <a class="d-flex flex-row justify-content-between">
-            <span class="text">Exportateurs</span>
-            <p-badge value="12"></p-badge>
-          </a>
-        </li>
-        <li class="menu-btn p-2" [class.active]="menuSelectionne === 8" (click)="menuSelectionne = 8">
-          <a class="d-flex flex-row justify-content-between">
-            <span class="text">Affectations exportateurs</span>
-            <p-badge value="12"></p-badge>
-          </a>
-        </li>
-        <li class="menu-btn p-2" [class.active]="menuSelectionne === 9" (click)="menuSelectionne = 9">
-          <a class="d-flex flex-row justify-content-between">
-            <span class="text">Ville</span>
-            <p-badge value="12"></p-badge>
-          </a>
-        </li>
-        <li class="menu-btn p-2" [class.active]="menuSelectionne === 10" (click)="menuSelectionne = 10">
-          <a class="d-flex flex-row justify-content-between">
-            <span class="text">Sites</span>
-            <p-badge value="12"></p-badge>
-          </a>
-        </li>
-        <li class="menu-btn p-2" [class.active]="menuSelectionne === 11" (click)="menuSelectionne = 11">
-          <a class="d-flex flex-row justify-content-between">
-            <span class="text">Zonages</span>
-            <p-badge value="12"></p-badge>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="col-lg-9">
-    <div class="card">
-
-    </div>
-  </div>
+	<div class="col-lg-3">
+		<div class="card left-card">
+			<ul class="menu">
+				<li class="menu-btn p-2" [class.active]="menuSelectionne === 1" (click)="menuSelectionne = 1">
+					<a class="d-flex flex-row justify-content-between">
+						<span class="text">Campagnes</span>
+						<p-badge value="12"></p-badge>
+					</a>
+				</li>
+				<li class="menu-btn p-2" [class.active]="menuSelectionne === 2" (click)="menuSelectionne = 2">
+					<a class="d-flex flex-row justify-content-between">
+						<span class="text">Détails campagne</span>
+						<p-badge value="12"></p-badge>
+					</a>
+				</li>
+				<li class="menu-btn p-2" [class.active]="menuSelectionne === 3" (click)="menuSelectionne = 3">
+					<a class="d-flex flex-row justify-content-between">
+						<span class="text">Spéculations</span>
+						<p-badge value="12"></p-badge>
+					</a>
+				</li>
+				<li class="menu-btn p-2" [class.active]="menuSelectionne === 4" (click)="menuSelectionne = 4">
+					<a class="d-flex flex-row justify-content-between">
+						<span class="text">détails scépulation</span>
+						<p-badge value="12"></p-badge>
+					</a>
+				</li>
+				<li class="menu-btn p-2" [class.active]="menuSelectionne === 5" (click)="menuSelectionne = 5">
+					<a class="d-flex flex-row justify-content-between">
+						<span class="text">Entrepôt</span>
+						<p-badge value="12"></p-badge>
+					</a>
+				</li>
+				<li class="menu-btn p-2" [class.active]="menuSelectionne === 6" (click)="menuSelectionne = 6">
+					<a class="d-flex flex-row justify-content-between">
+						<span class="text">Groupement</span>
+						<p-badge value="12"></p-badge>
+					</a>
+				</li>
+				<li class="menu-btn p-2" [class.active]="menuSelectionne === 7" (click)="menuSelectionne = 7">
+					<a class="d-flex flex-row justify-content-between">
+						<span class="text">Exportateurs</span>
+						<p-badge value="12"></p-badge>
+					</a>
+				</li>
+				<li class="menu-btn p-2" [class.active]="menuSelectionne === 8" (click)="menuSelectionne = 8">
+					<a class="d-flex flex-row justify-content-between">
+						<span class="text">Affectations exportateurs</span>
+						<p-badge value="12"></p-badge>
+					</a>
+				</li>
+				<li class="menu-btn p-2" [class.active]="menuSelectionne === 9" (click)="menuSelectionne = 9">
+					<a class="d-flex flex-row justify-content-between">
+						<span class="text">Ville</span>
+						<p-badge value="12"></p-badge>
+					</a>
+				</li>
+				<li class="menu-btn p-2" [class.active]="menuSelectionne === 10" (click)="menuSelectionne = 10">
+					<a class="d-flex flex-row justify-content-between">
+						<span class="text">Sites</span>
+						<p-badge value="12"></p-badge>
+					</a>
+				</li>
+				<li class="menu-btn p-2" [class.active]="menuSelectionne === 11" (click)="menuSelectionne = 11">
+					<a class="d-flex flex-row justify-content-between">
+						<span class="text">Zonages</span>
+						<p-badge value="12"></p-badge>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="col-lg-9">
+		<div class="card rigth-card">
+			<p-table #dt [value]="entrepots" [rows]="10" [paginator]="true"
+			         [globalFilterFields]="['name','country.name','representative.name','status']"
+			         [rowHover]="true" dataKey="id"
+			         currentPageReportTemplate="affichage de la {first} à la {last} entrées sur {totalRecords}"
+			         [showCurrentPageReport]="true"
+			         styleClass="p-datatable-sm p-datatable-striped">
+				<ng-template pTemplate="caption">
+					<div class="d-flex flex-row justify-content-between">
+						<h5 class="p-m-0 title-color">Liste des entrepôts</h5>
+						<span class="p-input-icon-left">
+			                    <i class="pi pi-search"></i>
+			                    <input pInputText type="text" [(ngModel)]="rechercher" [ngStyle]="{'border-radius':'50px'}"
+			                           (input)="dt.filterGlobal(rechercher, 'contains')" placeholder="Rechercher..."/>
+			                </span>
+					</div>
+				</ng-template>
+				<ng-template pTemplate="header">
+					<tr>
+						<th pSortableColumn="libelle" [ngStyle]="{'border-bottom-left-radius': '15px', 'border-top-left-radius': '15px'}">Libelle
+							<p-sortIcon field="libelle"></p-sortIcon>
+						</th>
+						<th pSortableColumn="superficie">Superficie
+							<p-sortIcon field="superficie"></p-sortIcon>
+						</th>
+						<th pSortableColumn="placer">Placer
+							<p-sortIcon field="placer"></p-sortIcon>
+						</th>
+						<th [ngStyle]="{'border-bottom-right-radius': '15px', 'border-top-right-radius': '15px'}">Action</th>
+					</tr>
+				</ng-template>
+				<ng-template pTemplate="body" let-entrepot>
+					<tr>
+						<td [ngStyle]="{'border-bottom-left-radius': '15px', 'border-top-left-radius': '15px'}">{{entrepot.libelle}}</td>
+						<td>{{entrepot.superficie}}</td>
+						<td>{{entrepot.placer}}</td>
+						<td [ngStyle]="{'border-bottom-right-radius': '15px', 'border-top-right-radius': '15px'}">
+							<button pButton pRipple icon="pi pi-pencil"
+							        class="p-button p-button-success m-1"
+							        (click)="modifierEntrepot(entrepot)"></button>
+							<button pButton pRipple icon="pi pi-trash" class="p-button p-button-warning m-1"
+							        (click)="supprimerEntrepot(entrepot)"></button>
+						</td>
+					</tr>
+				</ng-template>
+			</p-table>
+		</div>
+	</div>
 </div>

@@ -1,4 +1,4 @@
-$primaryColor: #e2b7ac !default;
+$primaryColor: rgb(226, 183, 172) !default;
 $secondaryColor: #5c3d2b !default;
 $primaryLightColor: scale-color($primaryColor, $lightness: 60%) !default;
 $primaryDarkColor: scale-color($primaryColor, $lightness: -10%) !default;

@@ -56,6 +56,85 @@
         }
       }
     }
+  }
+
+  .rigth-card {
+    padding: 15px;
+    background-color: $shade100;
+    height: 100%;
+    border:none;
+
+    ::ng-deep {
+      .p-datatable, .p-datatable-header, .p-datatable-hoverable-rows, .p-datatable-thead {
+        border: none;
+      }
+
+      .p-datatable-hoverable-rows {
+        .p-datatable-tbody > tr:not(.p-highlight):hover {
+          background: $light-orange-opacity;
+          color: black;
+        }
+      }
+
+      .p-datatable .p-datatable-thead > tr > th {
+        background-color: $primaryColor;
+        color: white;
+        border: none;
+      }
+
+      .p-datatable .p-datatable-tbody > tr > td {
+        padding: 0 10px;
+        border: none;
+      }
+
+      .p-datatable-striped {
+        .p-datatable-tbody {
+          > tr:nth-child(even) {
+            background: $primaryColor;
+          }
+        }
+      }
+
+      .p-sortable-column-icon {
+        color: $secondaryColor;
+      }
+
+      .p-highlight {
+        .p-sortable-column-icon {
+          color: $secondaryColor;
+        }
+
+        &:hover {
+          .p-sortable-column-icon {
+            color: $secondaryColor;
+          }
+        }
+      }
+
+      .p-button-warning {
+        background-color: $secondaryColor;
+        color: #ffffff;
+        border:none;
+
+        &:hover {
+          background-color: $secondaryColor;
+        }
+      }
+
+      .p-button-success {
+        background-color: $secondaryColor;
+        color: #ffffff;
+        border:none;
+
+        &:hover {
+          background-color: $light-orange-opacity;
+        }
+      }
+    }
+
+    .title-color {
+      color: $secondaryColor;
+    }
 
   }
 }

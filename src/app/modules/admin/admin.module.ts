@@ -8,11 +8,16 @@ import {BreadcrumbModule} from 'primeng/breadcrumb';
 import {ButtonModule} from "primeng/button";
 import {RippleModule} from "primeng/ripple";
 import {BadgeModule} from "primeng/badge";
+import {TableModule} from "primeng/table";
+import {InputTextModule} from "primeng/inputtext";
+import {FormsModule} from "@angular/forms";
+import { FormulaireEntrepotComponent } from './formulaire-entrepot/formulaire-entrepot.component';
 
 @NgModule({
   declarations: [
     AdminComponent,
-    ListeEntrepotComponent
+    ListeEntrepotComponent,
+    FormulaireEntrepotComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +27,10 @@ import {BadgeModule} from "primeng/badge";
     ButtonModule,
     RippleModule,
     BadgeModule,
-    BadgeModule
+    BadgeModule,
+    TableModule,
+    InputTextModule,
+    FormsModule
   ]
 })
 export class AdminModule { }
