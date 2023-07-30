@@ -1,1 +1,58 @@
-<p>formulaire-entrepot works!</p>
+<div class="row">
+	<div class="col-lg-6">
+		<p-breadcrumb [model]="items"></p-breadcrumb>
+	</div>
+	<div class="col-lg-6 text-end">
+		<button [routerLink]="'/admin/liste-entrepot'" pButton pRipple label="precédent" class="p-button" icon="pi pi-angle-left"></button>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+		<div class="card">
+			<div class="row mb-5">
+				<div class="col-lg-12 px-5 py-3">
+					<h6 class="title-color text-start">Créer un entrepôt</h6>
+				</div>
+			</div>
+			<div class="row">
+				<form class="px-5">
+					<div class="row mb-3 px-5">
+						<div class="col-md-6">
+							<label for="libelle">Libellé</label>
+							<input id="libelle" type="text" pInputText class="p-inputtext" [ngStyle]="{'width':'100%'}">
+						</div>
+						<div class="col-md-6">
+							<label for="longitude">Longitude</label>
+							<input id="longitude" type="number" pInputText class="p-inputtext" [ngStyle]="{'width':'100%'}">
+						</div>
+					</div>
+					<div class="row mb-3 px-5">
+						<div class="col-md-6">
+							<label for="superficie">Superficie (m 2)</label>
+							<input id="superficie" type="number" pInputText class="p-inputtext" [ngStyle]="{'width':'100%'}">
+						</div>
+						<div class="col-md-6">
+							<label for="latitude">Latitude</label>
+							<input id="latitude" type="number" pInputText class="p-inputtext" [ngStyle]="{'width':'100%'}">
+						</div>
+					</div>
+					<div class="row mb-5 px-5">
+						<div class="col-md-6">
+							<label for="placer">Placer</label>
+							<input id="placer" type="text" pInputText class="p-inputtext" [ngStyle]="{'width':'100%'}">
+						</div>
+					</div>
+					<div class="row px-5">
+						<div class="col-md-6">
+							<p-button label="Annuler" type="reset" styleClass="p-button-primary"></p-button>
+						</div>
+						<div class="col-md-6 text-end">
+							<p-button label="Enregistrer" styleClass="p-button-secondary"></p-button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

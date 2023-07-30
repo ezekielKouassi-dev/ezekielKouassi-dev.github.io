@@ -3,17 +3,21 @@
 :host::ng-deep {
   .p-breadcrumb {
     border: none;
+    background-color: $shade100;
+    font-size: 14px;
   }
 
   .p-button {
-    background-color: $primaryDarkColor;
+    border: none;
+    background-color: $light-orange-opacity;
+    color: $secondaryColor;
+    font-size: 12px;
   }
 
   .left-card {
     padding: 15px 8px;
     height: 100%;
     width: 100%;
-    background-color: $shade100;
     border: none;
 
     .menu {
@@ -60,7 +64,6 @@
 
   .rigth-card {
     padding: 15px;
-    background-color: $shade100;
     height: 100%;
     border:none;
 

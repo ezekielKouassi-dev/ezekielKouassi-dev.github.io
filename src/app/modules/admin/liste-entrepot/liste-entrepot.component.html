@@ -1,9 +1,10 @@
+<p-toast></p-toast>
 <div class="row">
 	<div class="col-lg-6">
 		<p-breadcrumb [model]="items"></p-breadcrumb>
 	</div>
 	<div class="col-lg-6 text-end">
-		<button pButton pRipple label="Créer un entrepôt" class="p-button"></button>
+		<button [routerLink]="'/admin/formulaire-entrepot'" pButton pRipple label="Créer un entrepôt" class="p-button" icon="pi pi-plus"></button>
 	</div>
 </div>
 
@@ -119,9 +120,9 @@
 						<td>{{entrepot.placer}}</td>
 						<td [ngStyle]="{'border-bottom-right-radius': '15px', 'border-top-right-radius': '15px'}">
 							<button pButton pRipple icon="pi pi-pencil"
-							        class="p-button p-button-success m-1"
+							        class="p-button p-button-secondary m-1"
 							        (click)="modifierEntrepot(entrepot)"></button>
-							<button pButton pRipple icon="pi pi-trash" class="p-button p-button-warning m-1"
+							<button pButton pRipple icon="pi pi-trash" class="p-button p-button-secondary m-1"
 							        (click)="supprimerEntrepot(entrepot)"></button>
 						</td>
 					</tr>
@@ -130,3 +131,5 @@
 		</div>
 	</div>
 </div>
+
+<p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>

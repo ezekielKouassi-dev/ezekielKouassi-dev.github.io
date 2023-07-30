@@ -12,6 +12,11 @@ import {TableModule} from "primeng/table";
 import {InputTextModule} from "primeng/inputtext";
 import {FormsModule} from "@angular/forms";
 import { FormulaireEntrepotComponent } from './formulaire-entrepot/formulaire-entrepot.component';
+import {StyleClassModule} from "primeng/styleclass";
+import {ConfirmDialogModule} from "primeng/confirmdialog";
+import {ConfirmationService, MessageService} from "primeng/api";
+import {MessageModule} from "primeng/message";
+import {ToastModule} from "primeng/toast";
 
 @NgModule({
   declarations: [
@@ -30,7 +35,15 @@ import { FormulaireEntrepotComponent } from './formulaire-entrepot/formulaire-en
     BadgeModule,
     TableModule,
     InputTextModule,
-    FormsModule
+    FormsModule,
+    StyleClassModule,
+    ConfirmDialogModule,
+    MessageModule,
+    ToastModule
+  ],
+  providers : [
+      ConfirmationService,
+    MessageService
   ]
 })
 export class AdminModule { }

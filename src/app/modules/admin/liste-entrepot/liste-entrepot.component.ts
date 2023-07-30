@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MenuItem} from "primeng/api";
+import {ConfirmationService, MenuItem, MessageService} from "primeng/api";
 import {Entrepot} from "../../../ricva-shared/models/entrepot.model";
 import {EntrepotsService} from "../../../ricva-shared/services/entrepots.service";
 
@@ -20,7 +20,9 @@ export class ListeEntrepotComponent implements OnInit{
   rechercher: string;
   cols!: Column[];
 
-  constructor(private entrepotService: EntrepotsService) {
+  constructor(private entrepotService: EntrepotsService,
+              private confirmationService: ConfirmationService,
+              private messageService: MessageService) {
 
   }
 
@@ -53,6 +55,20 @@ export class ListeEntrepotComponent implements OnInit{
   }
 
   supprimerEntrepot(entrepot: Entrepot) {
-    console.log('suppression en cours', entrepot);
+    this.confirmationService.confirm({
+      message: `Voulez-vous supprimer l\'entrepôt ${entrepot.libelle}?`,
+      header: 'Suppression d\'un entrepôt',
+      acceptButtonStyleClass: 'p-button-secondary',
+      acceptLabel: 'supprimer',
+      rejectLabel: 'annuler',
+      icon: 'pi pi-exclamation-triangle',
+      accept: () => {
+        this.messageService.add({
+          severity: 'success',
+          summary: 'Succès',
+          detail: `Entrepôt ${entrepot.libelle} supprimé`
+        })
+      }
+    });
   }
 }

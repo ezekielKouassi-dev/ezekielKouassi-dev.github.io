@@ -1,0 +1,46 @@
+@import '../../../../assets/scss/theme/theme.scss';
+
+:host::ng-deep {
+  .p-breadcrumb {
+	background-color: $shade100;
+	border: none;
+	font-size: 14px;
+  }
+
+  .title-color {
+	color: $secondaryColor;
+  }
+
+  .p-button {
+	border: none;
+	background-color: $light-orange-opacity;
+	color: $secondaryColor;
+	padding: 8px 35px;
+	font-size: 10px;
+  }
+
+  .card {
+	height: 70vh;
+	border: none;
+
+	.p-button-primary {
+	  border: none;
+	  background-color: $light-orange-opacity;
+	  color: $secondaryColor;
+	  padding: 8px 35px;
+	  font-size: 10px;
+	}
+
+	.p-button-secondary {
+	  border: none!important;
+	  background-color: $secondaryColor;
+	  color: #ffffff;
+	  padding: 8px 35px;
+	  font-size: 10px;
+	}
+
+	label {
+	  font-size: 12px;
+	}
+  }
+}
