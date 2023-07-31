@@ -8,17 +8,32 @@
     </div>
     <div class="row">
       <p class="title-color text-center">Connexion</p>
-      <form>
+      <form #form="ngForm" [formGroup]="formulaireConnexion">
         <div class="mb-3">
           <label for="username">Email ou Téléphone</label>
-          <input id="username" type="text" pInputText class="p-inputtext">
+          <input id="username" type="text" pInputText class="p-inputtext" formControlName="email">
+          <small id="email-help"
+                 class="p-error"
+                 *ngIf="isAfficherFeedBackError(formulaireConnexion.controls['email'], form.submitted)">
+            champs obligatoire
+          </small>
+
         </div>
         <div class="mb-3">
           <label for="motDePasse">Mot de passe</label>
-          <input id="motDePasse" type="password" pInputText class="p-inputtext">
+          <input id="motDePasse" type="password" pInputText class="p-inputtext" formControlName="motDePasse">
+          <small id="motdepasse-help"
+                 class="p-error"
+                 *ngIf="isAfficherFeedBackError(formulaireConnexion.controls['motDePasse'], form.submitted)">
+            champs obligatoire
+          </small>
+
         </div>
-        <div class="mb-3 text-center">
-          <button pButton pRipple [routerLink]="'/admin'" routerLinkActive="active" label="Se connecter" class="p-button-secondary p-button-raised"></button>
+        <div *ngIf="!loading" class="mb-3 text-center">
+          <button pButton pRipple (click)="goToAdmin()" type="submit" label="Se connecter" class="p-button-secondary p-button-raised"></button>
+        </div>
+        <div *ngIf="loading" class="mb-3 text-center">
+          <p-progressSpinner></p-progressSpinner>
         </div>
       </form>
     </div>

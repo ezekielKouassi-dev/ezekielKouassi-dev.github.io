@@ -1,3 +1,4 @@
+<p-toast></p-toast>
 <div class="row">
 	<div class="col-lg-6">
 		<p-breadcrumb [model]="items"></p-breadcrumb>
@@ -16,31 +17,31 @@
 				</div>
 			</div>
 			<div class="row">
-				<form class="px-5">
+				<form class="px-5" [formGroup]="formulaireEntrepot">
 					<div class="row mb-3 px-5">
 						<div class="col-md-6">
 							<label for="libelle">Libellé</label>
-							<input id="libelle" type="text" pInputText class="p-inputtext" [ngStyle]="{'width':'100%'}">
+							<input id="libelle" type="text" pInputText class="p-inputtext" formControlName="libelle" [ngStyle]="{'width':'100%'}">
 						</div>
 						<div class="col-md-6">
 							<label for="longitude">Longitude</label>
-							<input id="longitude" type="number" pInputText class="p-inputtext" [ngStyle]="{'width':'100%'}">
+							<input id="longitude" type="number" pInputText class="p-inputtext" formControlName="longitude" [ngStyle]="{'width':'100%'}">
 						</div>
 					</div>
 					<div class="row mb-3 px-5">
 						<div class="col-md-6">
 							<label for="superficie">Superficie (m 2)</label>
-							<input id="superficie" type="number" pInputText class="p-inputtext" [ngStyle]="{'width':'100%'}">
+							<input id="superficie" type="number" pInputText class="p-inputtext" formControlName="superficie" [ngStyle]="{'width':'100%'}">
 						</div>
 						<div class="col-md-6">
 							<label for="latitude">Latitude</label>
-							<input id="latitude" type="number" pInputText class="p-inputtext" [ngStyle]="{'width':'100%'}">
+							<input id="latitude" type="number" pInputText class="p-inputtext" formControlName="latitude" [ngStyle]="{'width':'100%'}">
 						</div>
 					</div>
 					<div class="row mb-5 px-5">
 						<div class="col-md-6">
 							<label for="placer">Placer</label>
-							<input id="placer" type="text" pInputText class="p-inputtext" [ngStyle]="{'width':'100%'}">
+							<input id="placer" type="text" pInputText class="p-inputtext" formControlName="placer" [ngStyle]="{'width':'100%'}">
 						</div>
 					</div>
 					<div class="row px-5">
@@ -48,7 +49,8 @@
 							<p-button label="Annuler" type="reset" styleClass="p-button-primary"></p-button>
 						</div>
 						<div class="col-md-6 text-end">
-							<p-button label="Enregistrer" styleClass="p-button-secondary"></p-button>
+							<p-button label="Enregistrer" type="submit" (click)="enregistrerEntrepot()" iconPos="right" [disabled]="loading"
+							           icon="{{ loading ? 'pi pi-spin pi-spinner' : '' }}" styleClass="p-button-secondary"></p-button>
 						</div>
 					</div>
 				</form>

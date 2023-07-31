@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ConfirmationService, MenuItem, MessageService} from "primeng/api";
 import {Entrepot} from "../../../ricva-shared/models/entrepot.model";
 import {EntrepotsService} from "../../../ricva-shared/services/entrepots.service";
+import { Router } from '@angular/router';
 
 interface Column {
   field: string;
@@ -22,7 +23,8 @@ export class ListeEntrepotComponent implements OnInit{
 
   constructor(private entrepotService: EntrepotsService,
               private confirmationService: ConfirmationService,
-              private messageService: MessageService) {
+              private messageService: MessageService,
+              private router: Router) {
 
   }
 
@@ -47,11 +49,17 @@ export class ListeEntrepotComponent implements OnInit{
    * récupère la liste des entrepôts depuis le service.
    */
   recupererListeEntrepot() {
-    this.entrepots = this.entrepotService.listeEntrepots();
+   this.entrepotService.getEntrepots().subscribe((entrepots) => {
+     this.entrepots = entrepots.map(entrepot => {
+       const data = entrepot.payload?.doc?.data() as Entrepot;
+       data.id = entrepot.payload?.doc?.id;
+       return data;
+     });     
+   });
   }
 
   modifierEntrepot(entrepot: Entrepot) {
-    console.log('modification en cours', entrepot);
+    this.router.navigate([`/admin/formulaire-entrepot/${entrepot.id}`]);
   }
 
   supprimerEntrepot(entrepot: Entrepot) {
@@ -63,11 +71,22 @@ export class ListeEntrepotComponent implements OnInit{
       rejectLabel: 'annuler',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
-        this.messageService.add({
-          severity: 'success',
-          summary: 'Succès',
-          detail: `Entrepôt ${entrepot.libelle} supprimé`
-        })
+        this.entrepotService.supprimerEntrepot(entrepot.id)
+            .then(() => {
+              this.messageService.add({
+                severity: 'success',
+                summary: 'Succès',
+                detail: `Entrepôt ${entrepot.libelle} supprimé.`
+              });
+              this.recupererListeEntrepot();
+            })
+            .catch(() => {
+              this.messageService.add({
+                severity: 'error',
+                summary: 'Echec',
+                detail: `Impossible de supprimer l'entrepôt ${entrepot.libelle}.`
+              });
+            });
       }
     });
   }

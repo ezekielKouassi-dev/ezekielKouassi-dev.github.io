@@ -10,6 +10,8 @@ import {InputTextModule} from "primeng/inputtext";
 import {PasswordModule} from 'primeng/password';
 import {ButtonModule} from "primeng/button";
 import {RippleModule} from "primeng/ripple";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {ProgressSpinnerModule} from "primeng/progressspinner";
 
 
 @NgModule({
@@ -31,7 +33,10 @@ import {RippleModule} from "primeng/ripple";
     InputTextModule,
     PasswordModule,
     ButtonModule,
-    RippleModule
+    RippleModule,
+    ReactiveFormsModule,
+    FormsModule,
+    ProgressSpinnerModule
   ]
 })
 export class AuthentificationModule {

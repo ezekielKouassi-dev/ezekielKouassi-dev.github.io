@@ -1,10 +1,10 @@
 export class Entrepot {
-  id: number;
+  id: string;
   libelle: string;
   superficie: number;
   placer: string;
 
-  constructor(id: number, libelle : string, superficie : number, placer : string) {
+  constructor(id: string, libelle : string, superficie : number, placer : string) {
     this.id = id;
     this.libelle = libelle;
     this.superficie = superficie;

@@ -21,6 +21,10 @@ const routes: Routes = [
       {
         path: 'formulaire-entrepot',
         component: FormulaireEntrepotComponent
+      },
+      {
+        path: 'formulaire-entrepot/:id',
+        component: FormulaireEntrepotComponent
       }
     ]
   }

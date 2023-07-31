@@ -10,7 +10,7 @@ import {RippleModule} from "primeng/ripple";
 import {BadgeModule} from "primeng/badge";
 import {TableModule} from "primeng/table";
 import {InputTextModule} from "primeng/inputtext";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { FormulaireEntrepotComponent } from './formulaire-entrepot/formulaire-entrepot.component';
 import {StyleClassModule} from "primeng/styleclass";
 import {ConfirmDialogModule} from "primeng/confirmdialog";
@@ -39,7 +39,8 @@ import {ToastModule} from "primeng/toast";
     StyleClassModule,
     ConfirmDialogModule,
     MessageModule,
-    ToastModule
+    ToastModule,
+    ReactiveFormsModule
   ],
   providers : [
       ConfirmationService,

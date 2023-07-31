@@ -6,6 +6,7 @@ import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
 import {BadgeModule} from 'primeng/badge';
 import { HeaderComponent } from './components/header/header.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HeaderComponent } from './components/header/header.component';
     CommonModule,
     ButtonModule,
     InputTextModule,
-    BadgeModule
+    BadgeModule,
+      ReactiveFormsModule
   ]
 })
 export class RicvaSharedModule {
