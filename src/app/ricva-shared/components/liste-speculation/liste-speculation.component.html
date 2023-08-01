@@ -1,5 +1,5 @@
-<div class="row">
-  <div *ngFor="let speculation of speculations" class="col-md-3">
-    <app-speculation [label]="speculation.label"></app-speculation>
+<div class="d-flex flex-row justify-content-start align-items-start">
+  <div *ngFor="let speculation of speculations">
+    <app-speculation [label]="speculation.label" [icon]="speculation.icon"></app-speculation>
   </div>
 </div>

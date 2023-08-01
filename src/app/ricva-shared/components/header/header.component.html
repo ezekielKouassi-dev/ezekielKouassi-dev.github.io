@@ -1,10 +1,11 @@
 <div class="container py-2 mb-3">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-lg-6">
       <app-liste-speculation></app-liste-speculation>
     </div>
-    <div class="col-md-6 text-end">
-      <p-button icon="pi pi-bell" label="12"></p-button>
+    <div class="col-lg-6 text-end">
+      <p-button icon="pi pi-bell" label="12" class="m-1"></p-button>
+      <p-button icon="pi pi-power-off" (onClick)="logout()"></p-button>
     </div>
   </div>
 </div>

@@ -136,6 +136,26 @@
           background-color: $light-orange-opacity;
         }
       }
+
+      .p-paginator {
+        color: $secondaryColor;
+        border-bottom: 1px solid black;
+      }
+
+      .p-paginator-element {
+        background-color: $light-orange-opacity;
+        color: $secondaryColor;
+      }
+
+      .p-paginator-pages {
+        .p-paginator-page {
+            &.p-highlight {
+                background: $secondaryColor;
+                border-color: $secondaryColor;
+                color: #ffffff;
+            }
+        }
+    }
     }
 
     .title-color {

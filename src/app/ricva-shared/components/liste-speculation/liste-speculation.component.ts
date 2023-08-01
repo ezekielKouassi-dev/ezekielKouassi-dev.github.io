@@ -8,16 +8,20 @@ import { Component } from '@angular/core';
 export class ListeSpeculationComponent {
   speculations: any[] = [
     {
-      label: 'cajoux'
+      label: 'cajoux',
+      icon: './../../../../../assets/img/icons8-noix-16.png'
     },
     {
-      label: 'cacao'
+      label: 'cacao',
+      icon: './../../../../../assets/img/icons8-cacao-flaticons-lineal-color-16.png'
     },
     {
-      label: 'hévéa'
+      label: 'hévéa',
+      icon: './../../../../../assets/img/icons8-asperges-16.png'
     },
     {
-      label: 'karité'
+      label: 'karité',
+      icon: './../../../../../assets/img/icons8-beurre-16.png'
     }
   ];
 }
