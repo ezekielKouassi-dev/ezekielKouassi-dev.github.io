@@ -12,6 +12,8 @@ import {ButtonModule} from "primeng/button";
 import {RippleModule} from "primeng/ripple";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ProgressSpinnerModule} from "primeng/progressspinner";
+import { MessageService } from 'primeng/api';
+import { MessageModule } from 'primeng/message';
 
 
 @NgModule({
@@ -36,7 +38,11 @@ import {ProgressSpinnerModule} from "primeng/progressspinner";
     RippleModule,
     ReactiveFormsModule,
     FormsModule,
-    ProgressSpinnerModule
+    ProgressSpinnerModule,
+    MessageModule
+  ],
+  providers: [
+    MessageService
   ]
 })
 export class AuthentificationModule {
