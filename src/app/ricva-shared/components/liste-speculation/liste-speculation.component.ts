@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-liste-speculation',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./liste-speculation.component.scss']
 })
 export class ListeSpeculationComponent {
+
+  constructor(private router: Router) {}
   speculations: any[] = [
     {
       label: 'cajoux',
@@ -24,4 +27,12 @@ export class ListeSpeculationComponent {
       icon: './../../../../../assets/img/icons8-beurre-16.png'
     }
   ];
+
+  isListeEntrepot(): boolean {
+    return this.router.url.includes('/liste-entrepot');
+  }
+
+  isConnexion(): boolean {
+    return this.router.url.includes('/auth/connexion');
+  }
 }

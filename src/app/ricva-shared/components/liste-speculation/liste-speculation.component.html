@@ -1,4 +1,5 @@
-<div class="d-flex flex-row justify-content-start align-items-start">
+<div class="d-flex flex-row justify-content-start align-items-start" 
+    [ngClass]="{'justify-content-center' : isConnexion(), 'justify-content-start': isListeEntrepot(), 'align-items-start' : isListeEntrepot(), 'align-items-center' : isConnexion()}">
   <div *ngFor="let speculation of speculations">
     <app-speculation [label]="speculation.label" [icon]="speculation.icon"></app-speculation>
   </div>

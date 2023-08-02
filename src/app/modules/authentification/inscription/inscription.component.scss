@@ -1,0 +1,11 @@
+:host {
+    label, p, small {
+        font-size: 11px;
+      }
+    
+      ::ng-deep {
+        .p-button-label {
+          font-size: 10px;
+        }
+      }
+}
