@@ -25,22 +25,46 @@ export class EntrepotsService implements OnInit{
     return this.entrepots;
   }
 
+  /**
+   * Permet d'avoir la liste des entrepôts.
+   */
   getEntrepots(): Observable<any[]> {
     return this.entrepotsCollection.snapshotChanges();
   }
 
+  /**
+   * Récupère un entrepôt par son id.
+   * @param id l'identifiant de l'entrepôt.
+   * @returns l'enteprôt correspondant.
+   */
   getEntrepotParId(id: string) {
     return this.entrepotsCollection.doc(id).valueChanges();
   }
 
+  /**
+   * Crèe un entrepôt.
+   * @param entrepot l'entrepôt qu'on souhaite ajouter.
+   * @returns une promesse contenant la reference du document.
+   */
   ajouterEntrepot(entrepot: any): Promise<DocumentReference<any>> {
     return this.entrepotsCollection.add(entrepot);
   }
 
+  /**
+   * 
+   * @param id l'identifiant de l'entrepôt qu'on souhaite modifier.
+   * @param nouvelleValeur les valeurs qu'on souhaite modifier.
+   * @returns void.
+   */
   mettreAJourEntrepot(id: string, nouvelleValeur: any): Promise<void> {
     return this.entrepotsCollection.doc(id).update(nouvelleValeur);
   }
 
+  /**
+   * 
+   * @param id l'identifiant de l'entrepot qu'on souhaite supprimer.
+   * @returns void.
+   */
   supprimerEntrepot(id: string): Promise<void> {
     return this.entrepotsCollection.doc(id).delete();
   }

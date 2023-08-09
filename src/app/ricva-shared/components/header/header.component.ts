@@ -13,6 +13,9 @@ export class HeaderComponent {
     private router: Router,
     private messageService: MessageService) {}
 
+  /**
+   * Permet de faire la déconnexion.
+  */
   logout() {
     this.utilisateurService.deconnexion()
     .then(() => {

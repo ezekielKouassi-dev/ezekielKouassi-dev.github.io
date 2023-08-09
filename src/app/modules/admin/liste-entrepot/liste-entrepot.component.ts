@@ -58,10 +58,18 @@ export class ListeEntrepotComponent implements OnInit{
    });
   }
 
+  /**
+   * Modifie un entrepot.
+   * @param entrepot l'entrpôt à modifier.
+   */
   modifierEntrepot(entrepot: Entrepot) {
     this.router.navigate([`/admin/formulaire-entrepot/${entrepot.id}`]);
   }
 
+  /**
+   * Supprime un entrepot.
+   * @param entrepot l'entrepôt à supprimer.
+   */
   supprimerEntrepot(entrepot: Entrepot) {
     this.confirmationService.confirm({
       message: `Voulez-vous supprimer l\'entrepôt ${entrepot.libelle}?`,

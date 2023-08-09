@@ -29,6 +29,9 @@ export class InscriptionComponent implements OnInit{
     this.inscription();
   }
 
+  /**
+   * Permet de faire l'inscription.
+   */
   inscription() {
     if (this.formulaireInscription.valid) {
       this.loading = true;
@@ -57,6 +60,10 @@ export class InscriptionComponent implements OnInit{
     }
   }
 
+  /**
+  * Vérifie si les controls dans le formulaire sont bon.
+  * @returns true si les champs ne sont pas en règle.
+  */
   isAfficherFeedBackError(formControl: AbstractControl, isSubmit: boolean): boolean {
     return (formControl.invalid && (formControl.dirty || formControl.touched)) || (formControl.invalid && isSubmit);
   }

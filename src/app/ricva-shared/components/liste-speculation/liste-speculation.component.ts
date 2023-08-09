@@ -9,6 +9,8 @@ import { Router, Routes } from '@angular/router';
 export class ListeSpeculationComponent {
 
   constructor(private router: Router) {}
+
+  // liste des icons pour les spéculations.
   speculations: any[] = [
     {
       label: 'cajoux',
@@ -28,10 +30,18 @@ export class ListeSpeculationComponent {
     }
   ];
 
+  /**
+   * Vérifie si nous sommes sur la page des entrepôts.
+   * @returns true si nous sommes sur la pages de la liste des entrepôts.
+   */
   isListeEntrepot(): boolean {
     return this.router.url.includes('/liste-entrepot');
   }
 
+  /**
+   * Vérifie si nous sommes sur la page de connexion.
+   * @returns True si nous sommes sur la page de connexion.
+   */
   isConnexion(): boolean {
     return this.router.url.includes('/auth/connexion');
   }

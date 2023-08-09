@@ -26,6 +26,9 @@ export class ConnexionComponent implements OnInit{
     });
   }
 
+  /**
+   * Redirige vers le dashboard admin lorsque le formulaire est valide. 
+   */
   goToAdmin(): void {
     if (this.formulaireConnexion.valid) {
       this.loading = true;
@@ -33,6 +36,9 @@ export class ConnexionComponent implements OnInit{
     }
   }
 
+  /** 
+  * Permet de connecter l'utilisateur.
+  */
   connexion() {
     this.utilisateurService.connexion(this.formulaireConnexion.value.email, this.formulaireConnexion.value.motDePasse)
         .then((result) => {
@@ -47,6 +53,10 @@ export class ConnexionComponent implements OnInit{
         });
   }
 
+  /**
+   * Vérifie si les controls dans le formulaire sont bon.
+   * @returns true si les champs ne sont pas en règle.
+   */
   isAfficherFeedBackError(formControl: AbstractControl, isSubmit: boolean): boolean {
     return (formControl.invalid && (formControl.dirty || formControl.touched)) || (formControl.invalid && isSubmit);
   }
