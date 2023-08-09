@@ -11,6 +11,18 @@
 
 Visitez l'application <a href="https://ezekielKouassi-dev.github.io">ici</a>
 
+## PROCEDURE POUR L'INSTALLATION DU PROJET
+
+<ol>
+  <li>
+    Cloner le projet avec la commande : 
+    <code><b>git clone https://github.com/ezekielKouassi-dev/ezekielKouassi-dev.github.io.git</b></code>
+  </li>
+  <li>Une fois le dépôt cloné, se positionner dans le repertoire du projet : <code><b>cd ezekielKouassi-dev.github.io</b></code></li>
+  <li>Ensuite, lancer la commande : <code><b>npm install</b></code> </li>
+  <li>Enfin, lancer le projet avec la commande : <code><b>npm start</b></code></li>
+</ol>
+
 ## DESCRIPTION DES PAGES DE L'APPLICATION
 
 ### Page de connexion : 
