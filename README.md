@@ -1,27 +1,34 @@
-# Ricva
+# Projet Ricva
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+<ul>
+  <li>FRONTEND : ANGULAR</li>
+  <li>DATABASE : FIREBASE</li>
+  <li>CSS FRAMEWORK : BOOTSTRAP</li>
+  <li>COMPONENT LIBRARY : PRIMENG -> https://www.primefaces.org/primeng-v14-lts/</li>
+</ul>
 
-## Development server
+## Lien de l'application déployé sur github
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Visitez l'application <a href="https://ezekielKouassi-dev.github.io">ici</a>
 
-## Code scaffolding
+## DESCRIPTION DES PAGES DE L'APPLICATION
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Page de connexion : 
+Cette page represente la page de connexion, vous devez renseigner votre adresse email et mot de passe afin d'avoir accès à la liste des entrepôts.
+<img width="1552" alt="Capture d’écran 2023-08-02 à 16 48 41" src="https://github.com/ezekielKouassi-dev/ezekielKouassi-dev.github.io/assets/121268728/1773748b-fd5a-47be-a938-c544b5479b00">
 
-## Build
+### Page d'inscription :
+Cette page permet à l'utilisateur d'inscrire sur la plateforme.
+<img width="1552" alt="Capture d’écran 2023-08-02 à 16 48 50" src="https://github.com/ezekielKouassi-dev/ezekielKouassi-dev.github.io/assets/121268728/e2cce305-9a2d-42c2-9903-5e07354a6dc7">
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Liste des entrepôts :
+<img width="1552" alt="Capture d’écran 2023-08-02 à 16 49 08" src="https://github.com/ezekielKouassi-dev/ezekielKouassi-dev.github.io/assets/121268728/28f1ca6e-d5a9-47c8-9621-a2d48c3bdc60">
 
-## Running unit tests
+### Enregistrement des entrepôts :
+<img width="1552" alt="Capture d’écran 2023-08-02 à 16 49 17" src="https://github.com/ezekielKouassi-dev/ezekielKouassi-dev.github.io/assets/121268728/dc563beb-f008-449d-85d2-5a79744d9d2e">
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Confirmation de suppression d'un entrepôt :
+<img width="1552" alt="Capture d’écran 2023-08-02 à 16 49 38" src="https://github.com/ezekielKouassi-dev/ezekielKouassi-dev.github.io/assets/121268728/c14b4557-c9e4-49e7-be82-82ede39a3374">
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Etat du code : 
+Le code est bien documenté, chaque méthode est commenté afin de mieux comprendre leurs utilités.
