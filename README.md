@@ -14,11 +14,11 @@ Visitez l'application <a href="https://ezekielKouassi-dev.github.io">ici</a>
 ## DESCRIPTION DES PAGES DE L'APPLICATION
 
 ### Page de connexion : 
-Cette page represente la page de connexion, vous devez renseigner votre adresse email et mot de passe afin d'avoir accès à la liste des entrepôts.
+Cette page représente la page de connexion, vous devez renseigner votre adresse email et mot de passe afin d'avoir accès à la liste des entrepôts.
 <img width="1552" alt="Capture d’écran 2023-08-02 à 16 48 41" src="https://github.com/ezekielKouassi-dev/ezekielKouassi-dev.github.io/assets/121268728/1773748b-fd5a-47be-a938-c544b5479b00">
 
 ### Page d'inscription :
-Cette page permet à l'utilisateur d'inscrire sur la plateforme.
+Cette page permet à l'utilisateur de s'inscrire sur la plateforme.
 <img width="1552" alt="Capture d’écran 2023-08-02 à 16 48 50" src="https://github.com/ezekielKouassi-dev/ezekielKouassi-dev.github.io/assets/121268728/e2cce305-9a2d-42c2-9903-5e07354a6dc7">
 
 ### Liste des entrepôts :
